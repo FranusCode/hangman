@@ -1,0 +1,71 @@
+  h1 {
+    margin-top: 70px;
+}
+  
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #000;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+  }
+  
+  .submit-btn:hover {
+    background-color: grey;
+  }
+
+  .logout-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 10px;
+}
+
+.logout-text {
+    
+    margin-top: 14px;
+    font-size: 16px;
+    color: #333;
+}
+
+.logout-button {
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.stats-button {
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.game-info {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.game-info h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.game-info p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.dashed-border {
+  border: 3px dashed #000;
+  padding: 10px;
+  margin: 20px;
+}
+

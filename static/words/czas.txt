@@ -1,0 +1,1 @@
+rok, dzień, noc, pora, godzina, minuta, tydzień, miesiąc, lato, zima, wiosna, jesień, wiek, kwartał, moment

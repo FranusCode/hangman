@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
+    <style>
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        .login-form h2 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .login-form .form-control {
+            margin-bottom: 15px;
+        }
+
+        .login-form .btn {
+            width: 100%;
+        }
+
+        .login-form .alert {
+            margin-bottom: 20px;
+        }
+        body {
+            background:
+                linear-gradient(90deg, rgba(173, 216, 230, 0.6) 1px, transparent 1px) 0 0,
+                linear-gradient(180deg, rgba(173, 216, 230, 0.6) 1px, transparent 1px) 0 0;
+            background-color: #ffffff;
+            background-size: 20px 20px;
+            background-repeat: repeat;
+            margin: 0;
+            font-family: 'Gloria Hallelujah';
+            margin-top: 140px;
+        }
+
+        .btn-custom {
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: transparent;
+            color: black; 
+            border: 2px solid black; 
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <form class="login-form" method="POST" action="/login">
+            <h2>Login</h2>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="alert alert-light" style="border: 2px dashed black; color: black; " role="alert">
+                {% for category, message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-custom">Login</button>
+            <div class="mt-3 text-center">
+                <p>Don't have an account? <a href="{{ url_for('register') }}">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
